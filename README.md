@@ -3,11 +3,8 @@
 
 ## AIM
 To develop a Django application to store and retrieve data from a Book database using Object Relational Mapping(ORM).
-
-## Entity Relationship Diagram
-
-Include your ER diagram here
-![alt text](<Screenshot 2024-03-18 224541.png>)
+### Entity Relationship Diagram
+![Screenshot 2024-03-22 131648](https://github.com/hanshika-773/ORM/assets/153576501/2a582bae-3d1d-4712-8b98-ce8755c3ab40)
 
 ## DESIGN STEPS
 
@@ -23,35 +20,29 @@ Enter the code for admin.py and models.py
 ### STEP 4:
 Execute Django admin and create details for 10 books
 
-## PROGRAM :
+## PROGRAM
 ```
-Models.py
+admin.py
+from django.contrib import admin
+from .models import Employee,EmployeeAdmin
+admin.site.register(Employee,EmployeeAdmin)
+
+models.py
 from django.db import models
 from django.contrib import admin
-# Create your models here.
-class BOOk(models.Model):
-    book_id=models.IntegerField(primary_key=True)
-    book_name=models.CharField(max_length=50)
-    publisher_name=models.CharField(max_length=50)
-    author_name=models.CharField(max_length=50)
-    publish_year=models.DateField()
-
-class BookAdmin(admin.ModelAdmin):
-    list_display=('book_id','book_name','publisher_name','author_name','publish_year')
-```    
-Include your code here
+class Employee (models.Model):
+    eid=models.IntegerField(primary_key=True)
+    name=models.CharField(max_length=100)
+    salary=models.IntegerField()
+    age=models.IntegerField()
+    email=models.EmailField()
+ 
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display=('eid','name','salary','age','email')
 ```
-from django.contrib import admin
-from .models import BOOk,BookAdmin
-# Register your models here.
-
-admin.site.register(BOOk,BookAdmin)
-```
-
 ## OUTPUT
-![alt text](<Screenshot 2024-03-18 223140-1.png>)
-![alt text](<Screenshot 2024-03-18 223156-1.png>)
-Include the screenshot of your admin page.
+
+![alt text](<Screenshot 2024-03-21 144926.png>)
 
 
 ## RESULT
