@@ -42,7 +42,7 @@ class EmployeeAdmin(admin.ModelAdmin):
 ```
 ## OUTPUT
 
-![alt text](<Screenshot 2024-03-21 144926.png>)
+![image](https://github.com/HEMAKESHG/ORM/assets/144870552/04eae038-0696-4880-8f5d-d95238fdcd58)
 
 
 ## RESULT
